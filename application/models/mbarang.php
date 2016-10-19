@@ -42,5 +42,8 @@ class Mbarang extends CI_Model {
         }
         return FALSE;
     }
+    function search_pegawai($id){
+       return $this->db->query("SELECT status,pegawai.nama as nama_peg, kota.nama as nama_kota, kelamin.nama as nama_kel, posisi.nama as nama_posisi, id_pegawai, no_telp FROM pegawai,kota,kelamin,posisi where kota.id = pegawai.kota and kelamin.id=pegawai.kelamin and posisi.id_posisi=pegawai.id_posisi and pegawai.id_pegawai='$id'")->result();
+    }
 }
 ?>

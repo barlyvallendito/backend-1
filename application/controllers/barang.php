@@ -91,6 +91,12 @@ class Barang extends CI_Controller {
         $this->session->set_flashdata("pesan", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-ok\"></i> Barang berhasil dihapus</div>");
         redirect('barang');
 	}
+    public function search(){
+        $id = addslashes($this->input->get('keyword'));
+        $data['title'] = 'CRUD CodeIgniter Studi Kasus Barang'; //judul title
+        $data['qbarang'] = $this->mbarang->search_pegawai($id);
+        $this->load->view('vbarang',$data);
+    }
 }
 
 /* End of file barang.php */
