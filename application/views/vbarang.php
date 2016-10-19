@@ -4,7 +4,7 @@
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="panel panel-default">
-  <div class="panel-heading"><b>Daftar Barang</b></div>
+  <div class="panel-heading"><b>Daftar Pegawai</b></div>
   <div class="panel-body">
     
       <a href="<?=base_url()?>barang/form/add" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-plus"></i> Tambah</a>

@@ -22,7 +22,7 @@ if($aksi=='aksi_add'){
 <div class="container">
       <!-- Main component for a primary marketing message or call to action -->
 <div class="panel panel-default">
-  <div class="panel-heading"><b>Form Barang</b></div>
+  <div class="panel-heading"><b>Form Pegawai</b></div>
   <div class="panel-body">
   <?=$this->session->flashdata('pesan')?>
      <form action="<?=base_url()?>barang/form/<?=$aksi?>" method="post">
@@ -54,7 +54,7 @@ if($aksi=='aksi_add'){
            </td>
          </tr>
          <tr>
-          <td>Kota</td><?=$kota?>
+          <td>Kota</td>
           <td>
             <div class="col-sm-2">
               <select name="kota">
