@@ -8,7 +8,7 @@
   <div class="panel-body">
     
       <a href="<?=base_url()?>barang/form/add" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
-
+      <form action="<?=base_url()?>/barang/search" method="GET" class="col-md-4 pull-right"><input type="text" class="form-control pull-right col-md-2" name="keyword"><button class="btn btn-success pull-right">Search</button></form>
        <table class="table table-striped">
         <thead>
          <tr>
@@ -46,8 +46,8 @@
 <?php
           } 
           ?>
-           <td><a href='<?=base_url()?>barang/form/edit/<?= $rowbarang->id_pegawai?>' class='btn btn-warning'>Detail</a></td>
-        <td><a href class='btn btn-danger'>Delete</a></td>
+           
+        <td><a href="<?=base_url()?>barang/hapus/<?= $rowbarang->id_pegawai?>" class='btn btn-danger'>Delete</a></td>
         <td><a href='<?=base_url()?>barang/form/edit/<?= $rowbarang->id_pegawai?>' class='btn btn-primary'>Edit</a></td>
 
          </tr>

@@ -32,6 +32,7 @@ if($aksi=='aksi_add'){
           <td style="width:15%;">ID</td>
           <td>
             <div class="col-sm-2">
+                <input type="hidden" name="id" class="form-control" value="<?=$id?>">
                 <input type="text" name="id" class="form-control" value="<?=$id?>" disabled>
             </div>
             </td>
@@ -71,8 +72,8 @@ if($aksi=='aksi_add'){
           <td>
            <div class="col-sm-6">
             <select name="jenis_kelamin">
-              <option value="1">Laki-Laki</option>
-              <option value="2">Perempuan</option>
+              <option value="1" <?php if($kelamin=="1")echo "selected='selected'"?>>Laki-Laki</option>
+              <option value="2" <?php if($kelamin=="2")echo "selected='selected'"?>>Perempuan</option>
             </select>
            </div>
             </td>
@@ -83,11 +84,11 @@ if($aksi=='aksi_add'){
           <td>
            <div class="col-sm-6">
             <select name="posisi">
-              <option value="1">IT</option>
-              <option value="2">HRD</option>
-              <option value="3">Keuangan</option>
-              <option value="4">Product</option>
-              <option value="5">Marketing</option>
+              <option value="1" <?php if($posisi=="1")echo "selected='selected'"?>>IT</option>
+              <option value="2" <?php if($posisi=="2")echo "selected='selected'"?>>HRD</option>
+              <option value="3" <?php if($posisi=="3")echo "selected='selected'"?>>Keuangan</option>
+              <option value="4" <?php if($posisi=="4")echo "selected='selected'"?>>Product</option>
+              <option value="5" <?php if($posisi=="5")echo "selected='selected'"?>>Marketing</option>
             </select>
            </div>
             </td>

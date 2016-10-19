@@ -28,13 +28,13 @@ class Mbarang extends CI_Model {
 
     function get_update($id,$data) {
 
-        $this->db->where('kode_brg', $id);
+        $this->db->where('id_pegawai', $id);
         $this->db->update($this->tabel, $data);
 
         return TRUE;
     }
     function del_barang($id) {
-        $this->db->where('kode_brg', $id);
+        $this->db->where('id_pegawai', $id);
         $this->db->delete($this->tabel);
         if ($this->db->affected_rows() == 1) {
 
